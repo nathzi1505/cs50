@@ -1,0 +1,34 @@
+<table class="table table-sm">
+    <tr>
+        <th> </th>
+        <th> </th>
+        <th> </th>
+        {% for ch in s2 %}
+            <th>{{ ch }}</th>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th> </th>
+        <th> </th>
+        <th>0</th>
+        {% for i in s2 %}
+            <th>{{ loop.index }}</th>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th> </th>
+        <th>0</th>
+        {% for tu_ple in matrix[0] %}
+            <td>{{ tu_ple[0] }}</td>
+        {% endfor %}
+    </tr>
+    {% for i in s1 %}
+    <tr>
+        <th>{{ i }}</th>
+        <th>{{ loop.index }}</th>
+        {% for tu_ple in matrix[loop.index] %}
+            <td>{{ tu_ple[0] }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>

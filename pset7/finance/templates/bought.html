@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Bought
+{% endblock %}
+
+{% block main %}
+    <main class = "container p-5">
+        <table class = "table table-striped">
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+                <tr>
+                    <td>{{ stock["symbol"] }}</td>
+                    <td>{{ stock["name"] }}</td>
+                    <td>{{ number }}</td>
+                    <td>{{ stock["price"] }}</td>
+                    <td>{{ total }}</td>
+                </tr>
+        </table>
+    </main>
+{% endblock %}

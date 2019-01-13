@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cash Added
+{% endblock %}
+
+{% block main %}
+    <main class = "container p-5">
+        <table class = "table table-striped">
+            <tr>
+                <th>Cash Added</th>
+            </tr>
+                <tr>
+                    <td>$ {{ add }}</td>
+                </tr>
+        </table>
+    </main>
+{% endblock %}

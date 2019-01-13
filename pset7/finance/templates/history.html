@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <main class = "container p-5">
+        <table class = "table table-striped">
+            <tr>
+                <th>Symbol</th>
+                <th>Status</th>
+                <th>Price Bought</th>
+                <th>Price Sold</th>
+                <th>Number</th>
+                <th>Time</th>
+            </tr>
+            {% for i in transactions %}
+                <tr>
+                    <td>{{ i["symbol"] }}</td>
+                    <td>{{ i["status"] }}</td>
+                    <td>{{ i["p_bought"] }}</td>
+                    <td>{{ i["p_sold"] }}</td>
+                    <td>{{ i["number"] }}</td>
+                    <td>{{ i["time"] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </main>
+{% endblock %}
